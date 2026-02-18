@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=config('DATABASE_URL')
+        default=f'sqlite:///{BASE_DIR / "db.sqlite3"}'
     )
 }
 
@@ -136,7 +136,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS = [
+CORS_ALLOWED_ORIGINS = [
     "https://e-commerce-store-gamma-virid.vercel.app",
     "http://localhost:5173",
 ]
@@ -161,11 +161,12 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
-PAYSTACK_SECRET_KEY = "sk_test_9c39f3c38e5f2f8e155b1c74e1b5c0f73778e35f"
-FRONTEND_URL = "http://localhost:5173"
+
+PAYSTACK_SECRET_KEY = config('PAYSTACK_SECRET_KEY')
+FRONTEND_URL = config('FRONTEND_URL')
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-COUDINARY_STORAGE = {
+CLOUDINARY_STORAGE = {
     'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME'),
     'API_KEY': config('CLOUDINARY_API_KEY'),
     'API_SECRET': config('CLOUDINARY_API_SECRET'),
