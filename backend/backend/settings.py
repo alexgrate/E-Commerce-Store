@@ -142,8 +142,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "https://e-commerce-store-gamma-virid.vercel.app",
     "http://localhost:5173",
+    "https://e-commerce-store-vzok.onrender.com/",
 ]
 
 MEDIA_URL = '/media/'
