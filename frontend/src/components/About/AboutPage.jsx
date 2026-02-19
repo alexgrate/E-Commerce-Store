@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import about01 from '../../assets/jol01.avif'
-import about02 from '../../assets/jol02.avif'
+import about01 from '../../assets/jol_01.avif'
+import about02 from '../../assets/jol_02.avif'
 
 import user01 from '../../assets/user01.webp'
 import user02 from '../../assets/user02.webp'
