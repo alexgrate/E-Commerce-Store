@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { heroSlides } from '../../constants'
+import { Link } from 'react-router-dom'
 
 const HeroSection = () => {
     const [current, setCurrent] = useState(0)
@@ -48,9 +49,9 @@ const HeroSection = () => {
                     </h1>
                 </div>
 
-                <button className="relative overflow-hidden border border-white/30 bg-transparent text-white px-10 py-4 font-semibold text-sm uppercase tracking-widest transition-colors duration-500 hover:text-black before:absolute before:inset-0 before:z-0 before:bg-white before:origin-bottom before:scale-y-0 before:transition-transform before:duration-500 hover:before:scale-y-100 cursor-pointer">
+                <Link to='/shop' className="relative overflow-hidden border border-white/30 bg-transparent text-white px-10 py-4 font-semibold text-sm uppercase tracking-widest transition-colors duration-500 hover:text-black before:absolute before:inset-0 before:z-0 before:bg-white before:origin-bottom before:scale-y-0 before:transition-transform before:duration-500 hover:before:scale-y-100 cursor-pointer">
                     <span className="relative z-10">Explore Collection</span>
-                </button>
+                </Link>
 
                 {/* Pagination with Slide Numbers */}
                 <div className="flex items-center space-x-6 z-10 mt-12">

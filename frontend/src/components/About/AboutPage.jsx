@@ -1,6 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import about01 from '../../assets/jol01.avif'
+import about02 from '../../assets/jol02.avif'
+
+import user01 from '../../assets/user01.webp'
+import user02 from '../../assets/user02.webp'
+
+import abouthero from '../../assets/20250927_HIGHFASHION_TJSAW_DAY031415_1.webp'
+
 const AboutPage = () => {
     return (
         <div className="bg-white min-h-screen">
@@ -9,7 +17,7 @@ const AboutPage = () => {
             <div className="relative h-screen flex items-center justify-center bg-black overflow-hidden">
                 <div className="absolute inset-0 bg-black/60 z-10"></div>
                 <img
-                    src="/images/about-hero.jpg"
+                    src={abouthero}
                     alt="HF Brand"
                     className="absolute inset-0 w-full h-full object-cover opacity-50"
                 />
@@ -66,14 +74,14 @@ const AboutPage = () => {
                     <div className="relative h-150">
                         <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-gray-100 overflow-hidden">
                             <img
-                                src="/images/about-1.jpg"
+                                src={about01}
                                 alt="HF Collection"
                                 className="w-full h-full object-cover"
                             />
                         </div>
                         <div className="absolute bottom-0 left-0 w-2/3 h-2/3 bg-gray-200 overflow-hidden border-4 border-white">
                             <img
-                                src="/images/about-2.jpg"
+                                src={about02}
                                 alt="HF Craftsmanship"
                                 className="w-full h-full object-cover"
                             />
@@ -153,9 +161,9 @@ const AboutPage = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
-                            { name: 'Alex Grate', role: 'Founder & Creative Director', image: '/images/team-1.jpg' },
-                            { name: 'Jordan King', role: 'Head of Design', image: '/images/team-2.jpg' },
-                            { name: 'Sam Cole', role: 'Brand Director', image: '/images/team-3.jpg' },
+                            { name: 'Rahman Jago', role: 'Founder & Creative Director', image: user01 },
+                            { name: 'Rahman Jago', role: 'Head of Design', image: user02 },
+                            { name: 'Rahman Jago', role: 'Brand Director', image: user01 },
                         ].map((member) => (
                             <div key={member.name} className="group">
                                 <div className="aspect-square bg-gray-200 overflow-hidden mb-6">

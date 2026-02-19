@@ -40,7 +40,7 @@ const SplitScreenHero = () => {
             />
 
             <motion.a
-                href='/new-releases'
+                href='/shop'
                 className='relative w-full h-1/2 md:w-1/2 md:h-full block overflow-hidden'
                 onMouseEnter={() => setHoveredSide('left')}
                 onMouseLeave={() => setHoveredSide(null)}
@@ -107,7 +107,7 @@ const SplitScreenHero = () => {
             </motion.a>
 
             <motion.a
-                href='/collection'
+                href='/shop'
                 className='relative w-full h-1/2 md:w-1/2 md:h-full block overflow-hidden'
                 onMouseEnter={() => setHoveredSide('right')}
                 onMouseLeave={() => setHoveredSide(null)}
