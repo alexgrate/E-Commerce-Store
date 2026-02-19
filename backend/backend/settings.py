@@ -150,7 +150,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 # ==================== MEDIA / CLOUDINARY ====================
-MEDIA_URL = f"https://res.cloudinary.com/{config('CLOUD_NAME')}/image/upload/"
+MEDIA_URL = '/media/'         
 
 STORAGES = {
     "default": {
