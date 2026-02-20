@@ -7,15 +7,6 @@ import Video from '../../assets/videos/video01.mp4';
 
 const SplitScreenHero = () => {
     const [hoveredSide, setHoveredSide] = useState(null);
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-    useEffect(() => {
-        const updateMouse = (e) => {
-            setMousePosition({ x: e.clientX, y: e.clientY });
-        };
-        window.addEventListener('mousemove', updateMouse);
-        return () => window.removeEventListener('mousemove', updateMouse);
-    }, []);
 
     const textVariants = {
         hidden: { opacity: 0, y: 50 },
@@ -28,17 +19,6 @@ const SplitScreenHero = () => {
 
     return (
         <div className="relative flex flex-col md:flex-row h-screen w-full bg-black overflow-hidden cursor-none">
-
-            <motion.div
-                className='fixed top-0 left-0 h-8 w-8 bg-white rounded-full mix-blend-difference z-50 pointer-events-none hidden md:block'
-                animate={{
-                    x: mousePosition.x - 16,
-                    y: mousePosition.y - 16,
-                    scale: hoveredSide ? 2.5 : 1
-                }}
-                transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-            />
-
             <motion.a
                 href='/shop'
                 className='relative w-full h-1/2 md:w-1/2 md:h-full block overflow-hidden'

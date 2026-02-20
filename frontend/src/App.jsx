@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Navbar from './components/NAV/Navbar'
@@ -36,9 +37,32 @@ const Home = () => {
 }
 
 const App = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const updateMouse = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY })
+    }
+    window.addEventListener('mousemove', updateMouse)
+    return () => window.removeEventListener('mousemove', updateMouse)
+  }, [])
+
 
   return (
     <BrowserRouter>
+
+      <motion.div
+        className='fixed top-0 left-0 z-9999 pointer-events-none hidden md:block'
+        animate={{
+          x: mousePosition.x - 16,
+          y: mousePosition.y - 16,
+        }}
+        transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1}}
+      >
+        <div className='h-8 w-8 rounded-full border border-white opacity-80' />
+        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-1 w-1 rounded-full bg-white' />
+
+      </motion.div>
       <ScrollToTop />
       <Navbar />
       <Routes>
