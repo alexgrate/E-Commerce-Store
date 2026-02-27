@@ -6,10 +6,8 @@ const NotFoundPage = () => {
     return (
         <div className="min-h-screen bg-white flex items-center justify-center px-4">
             <div className="text-center max-w-md">
-                {/* 404 */}
                 <h1 className="text-9xl font-black text-black mb-4">404</h1>
                 
-                {/* Message */}
                 <p className="text-xs font-bold uppercase tracking-[0.4em] text-gray-400 mb-4">
                     Page Not Found
                 </p>
@@ -18,7 +16,6 @@ const NotFoundPage = () => {
                     Let's get you back on track.
                 </p>
 
-                {/* Actions */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link
                         to="/"
@@ -36,7 +33,6 @@ const NotFoundPage = () => {
                     </Link>
                 </div>
 
-                {/* Popular Links */}
                 <div className="mt-16 pt-8 border-t border-gray-200">
                     <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
                         Popular Pages

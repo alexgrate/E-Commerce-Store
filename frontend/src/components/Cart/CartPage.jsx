@@ -49,7 +49,6 @@ const CartPage = () => {
                         </h1>
 
                         <div className="flex flex-col lg:flex-row gap-8">
-                            {/* Cart Items */}
                             <div className="flex-1 space-y-4">
                                 <AnimatePresence>
                                     {cartItems.map(item => {
@@ -130,7 +129,6 @@ const CartPage = () => {
                                 </div>
                             </div>
 
-                            {/* Order Summary */}
                             <div className="lg:w-96 flex shrink-0">
                                 <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 sticky top-28 w-full">
                                     <h3 className="text-xl font-bold mb-6 font-display">Order Summary</h3>
@@ -138,7 +136,7 @@ const CartPage = () => {
                                     <div className="space-y-4 mb-6">
                                         <div className="flex justify-between text-gray-600">
                                             <span>Subtotal</span>
-                                            <span className="font-bold text-black">${total.toFixed(2)}</span>
+                                            <span className="font-bold text-black">₦{total.toFixed(2)}</span>
                                         </div>
                                         <div className="flex justify-between text-gray-600">
                                             <span>Shipping</span>
@@ -146,11 +144,10 @@ const CartPage = () => {
                                         </div>
                                         <div className="flex justify-between text-gray-600">
                                             <span>Tax</span>
-                                            <span className="text-sm">${(total * 0.1).toFixed(2)}</span>
+                                            <span className="text-sm">₦{(total * 0.1).toFixed(2)}</span>
                                         </div>
                                     </div>
 
-                                    {/* Coupon Input */}
                                     <div className="mb-6">
                                         <div className="flex gap-2">
                                             <input 
@@ -168,7 +165,7 @@ const CartPage = () => {
                                         <div className="flex justify-between items-center">
                                             <span className="text-lg font-bold">Total</span>
                                             <div className="text-right">
-                                                <span className="text-2xl font-black block">${(total * 1.1).toFixed(2)}</span>
+                                                <span className="text-2xl font-black block">₦{(total * 1.1).toFixed(2)}</span>
                                                 <span className="text-xs text-gray-500">Including VAT</span>
                                             </div>
                                         </div>
